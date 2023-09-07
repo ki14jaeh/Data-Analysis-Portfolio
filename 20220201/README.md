@@ -56,7 +56,7 @@ ax_bb.set_title('Big Bank Loan Trends')
 ax_bb.legend()
 plt.show()
 ```
-<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230907/10YUSGG10YR%20vs.%20TLT.png" width="600" />
+<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20220201/Loan%20Trend%20Big%20Commercial%20Bank.png" width="600" />
 
 ```
 # Create a figure and axis object
@@ -85,4 +85,4 @@ ax_rb.set_title('Regional Bank Deposit Trends')
 ax_rb.legend()
 plt.show()
 ```
-<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230907/10YUSGG10YR%20vs.%20TLT.png" width="600" />
+<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20220201/Deposit%20Trend%20Regional%20Bank.png" width="600" />
