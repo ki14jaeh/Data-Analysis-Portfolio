@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 # replace 'YOUR_API_KEY' with your actual FRED API key
 fred = Fred(api_key=YOUR_API_KEY)
 
-# retrieve data for the series 'DPSACBW027SBOG'
+# retrieve data for the series 'DRCCLACBS'
 delinquency = fred.get_series('DRCCLACBS') # Delinquency Rate on Credit Card Loans, All Commercial Banks 
 
 fig, ax = plt.subplots(figsize=(12,8))
@@ -15,8 +15,7 @@ ax.plot(delinquency)
 ax.set_ylabel('Percent')
 ax.set_title(" Delinquency Rate on Credit Card Loans, All Commercial Banks ")
 ```
-
-dd
+https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230906/Delinquency%20Rate%20on%20Credit%20Card%20Loans.png
 
 ```
 # Calculate the rate of change using the 'pct_change' method
