@@ -5,7 +5,9 @@ Crude oil prices are beginning to upside as two of the largest crude exporters, 
 
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/WTI%20Prices.png" width="600" />
 
-The US 10Y Yield and oil prices are closely correlated. As 
+The US 10Y Yield and oil prices are closely correlated. As seen below WTI Crude Oil and US 10-Year Tresury Yield has a relatively positive correlation. This is because increasing oil prices leads to an increase in the expected inflation rate, ultiamtely leading to interest rates and bond yields rising. Bonds with longer cash flows will see their yields rise and prices fall the most
+
+<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/10YUSGG10YR%20vs.%20WTI.png" width="600" />
 
 ### Declining Foreign Holdings of US Treasury
 China and Saudi Arabia has been shaving off its holdings of US Treasuries. Though China still holds second most US Treasury Bonds in the world, they have been reducing its exposure to US currency by cutting its holdings[^4]. Now China , lowest since the 2008 financial crisis.
