@@ -123,6 +123,7 @@ plt.show()
 
 ### Declining Foreign Holdings of US Treasury
 China and Saudi Arabia has been shaving off its holdings of US Treasuries. Though China still holds second most US Treasury Bonds in the world, they have been reducing its exposure to US currency by cutting its holdings[^4]. Now China , lowest since the 2008 financial crisis.
+
 ```
 import requests
 import pandas as pd
@@ -159,6 +160,7 @@ ax2.set_ylabel('Holdings at end of time period (in Billion $)')
 ax2.set_title(f"{country_name}: US Treasury Holdings")
 ```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230907/China%20US%20Treasury%20Holdings.png" width="600" />
+
 ```
 fig1, ax1 = plt.subplots(figsize=(12,8))
 
@@ -172,6 +174,7 @@ ax1.set_xlabel('Month')
 ax1.set_ylabel('Holdings at end of time period (in Billion $)')
 ax1.set_title(f"{country_name}: US Treasury Holdings")
 ```
+
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/Saudi%20Arabia%20US%20Treasury%20Holding.png" width="600" />
 
 The selling pressures will lead to bond prices falling, which will inevitably lead to a increase in interest rates.
