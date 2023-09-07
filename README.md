@@ -10,9 +10,9 @@ The US 10Y Yield and oil prices are closely correlated. As
 ### Declining Foreign Holdings of US Treasury
 China and Saudi Arabia has been shaving off its holdings of US Treasuries. Though China still holds second most US Treasury Bonds in the world, they have been reducing its exposure to US currency by cutting its holdings[^4]. Now China , lowest since the 2008 financial crisis.
 
-<img src="https://github.com/ki14jaeh/inProgress/assets/144283398/a34fa5b0-7001-4a8b-a3e0-26320bc24176)" width="600" />
+<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/China%20US%20Treasury%20Holdings.png" width="600" />
 
-<img src="https://github.com/ki14jaeh/inProgress/assets/144283398/e8b5c733-b1c4-4f22-a8af-0b50e7b74b5e)" width="600" />
+<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/Saudi%20Arabia%20US%20Treasury%20Holding.png" width="600" />
 
 The selling pressures will lead to bond prices falling, which will inevitably lead to a increase in interest rates.
 
