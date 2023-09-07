@@ -15,7 +15,10 @@ ax.plot(delinquency)
 ax.set_ylabel('Percent')
 ax.set_title(" Delinquency Rate on Credit Card Loans, All Commercial Banks ")
 ```
-https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230906/Delinquency%20Rate%20on%20Credit%20Card%20Loans.png
+<img src= 
+"https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230906/Delinquency%20Rate%20on%20Credit%20Card%20Loans.png"
+ width="600" 
+  />
 
 ```
 # Calculate the rate of change using the 'pct_change' method
