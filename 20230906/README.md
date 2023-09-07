@@ -38,7 +38,10 @@ plt.axhline(y=0, color = 'black')
 plt.axhline(y=delinquency1['Rate_of_Change'].max(), color='red', linestyle='--')
 plt.annotate('Source: FRED', (0,0), (-80,-20), fontsize=6, xycoords='axes fraction', textcoords='offset points', va='top')
 ```
-dd
+<img src= 
+"https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230906/YoY%20Growth%20in%20Credit%20Card%20Delinquency.png"
+ width="600" 
+  />
 
 ```
 jolts2 = fred.get_series('JTSQUR') #Quits: Total Nonfarm
