@@ -3,7 +3,7 @@
 ### Rising Oil Prices
 Crude oil prices are beginning to upside as two of the largest crude exporters, China and Russia, prolongs their voluntary production cut[^1]. The existing fear of inflation makes the inflationary pressure of rising oil prices particulary pulpable. With the 2024 Presidential Election on the horizon, rising gas prices are critical for President Biden's re-election campaign. Last year, Biden has already utilized 180 mm barrels of the US Petroleum Reserve, which is now at the lowest level since 1983[^2]. The fund has declined by approximately 300 mm barrels since Biden took office[^3]. Though not as high as its 2022 peak, Crude Oil Futures (WTI) has seen a sharp increase in the last couple months.
 
-      <center><img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230907/WTI%20Prices.png" width="600" /></center>
+<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230907/WTI%20Prices.png" width="600" />
       <center>*Figure 1*
 
 The US 10Y Yield and oil prices are closely correlated. As seen below WTI Crude Oil and US 10-Year Tresury Yield has a relatively positive correlation. This is because increasing oil prices leads to an increase in the expected inflation rate, ultiamtely leading to interest rates and bond yields rising. Bonds with longer cash flows will see their yields rise and prices fall the most
