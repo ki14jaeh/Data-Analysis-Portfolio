@@ -1,5 +1,5 @@
 US Deficit reaches unsustainable levels
- ```
+```
 import pandas as pd
 from fredapi import Fred
 import matplotlib.pyplot as plt
@@ -18,3 +18,7 @@ ax.plot(fedsd)
 ax.set_ylabel('Percent')
 ax.set_title("Federal Surplus or Deficit")
 ```
+<img src= 
+"https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230715/US%20Debt%20Deficit%20Surplus.png"
+ width="600" 
+  />
