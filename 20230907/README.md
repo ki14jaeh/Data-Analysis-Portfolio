@@ -123,9 +123,55 @@ plt.show()
 
 ### Declining Foreign Holdings of US Treasury
 China and Saudi Arabia has been shaving off its holdings of US Treasuries. Though China still holds second most US Treasury Bonds in the world, they have been reducing its exposure to US currency by cutting its holdings[^4]. Now China , lowest since the 2008 financial crisis.
+```
+import requests
+import pandas as pd
+import matplotlib.pyplot as plt
 
+url = "https://ticdata.treasury.gov/resource-center/data-chart-center/tic/Documents/slt_table5.html"
+html = requests.get(url).content
+
+# Read all tables from the HTML content (specift that first row is header)
+tables = pd.read_html(html)
+
+# Select the specific DataFrame you want from the list (e.g., the first one)
+df = tables[0]
+
+# Drop rows with missing values (NaN) and remove first column
+df = df.dropna().reset_index()
+
+#Change first row to header
+df.columns = df.iloc[0]
+df = df[df.columns[::-1]]
+cols = list(df.columns)
+cols = [cols[-1]] + cols[:-1]
+df = df[cols]
+df = df[1:].iloc[:, 1:]
+
+country_name = "China, Mainland"
+df2 = df.loc[df["Country"] == country_name]
+df2 = df2.drop(columns=['Country']).astype(float)
+df2 = df2.transpose()
+ax2.plot(df2)
+
+ax2.set_xlabel('Month')
+ax2.set_ylabel('Holdings at end of time period (in Billion $)')
+ax2.set_title(f"{country_name}: US Treasury Holdings")
+```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230907/China%20US%20Treasury%20Holdings.png" width="600" />
+```
+fig1, ax1 = plt.subplots(figsize=(12,8))
 
+country_name = "Saudi Arabia"
+df1 = df.loc[df["Country"] == country_name]
+df1 = df1.drop(columns=['Country']).astype(float)
+df1 = df1.transpose()
+ax1.plot(df1)
+
+ax1.set_xlabel('Month')
+ax1.set_ylabel('Holdings at end of time period (in Billion $)')
+ax1.set_title(f"{country_name}: US Treasury Holdings")
+```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/Saudi%20Arabia%20US%20Treasury%20Holding.png" width="600" />
 
 The selling pressures will lead to bond prices falling, which will inevitably lead to a increase in interest rates.
