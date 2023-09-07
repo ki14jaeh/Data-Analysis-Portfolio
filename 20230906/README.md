@@ -4,8 +4,7 @@ from fredapi import Fred
 import matplotlib.pyplot as plt
 
 # replace 'YOUR_API_KEY' with your actual FRED API key
-key = 'fe9f42b07c731caccc44b8a79c0d16df'
-fred = Fred(api_key=key)
+fred = Fred(api_key=YOUR_API_KEY)
 
 # retrieve data for the series 'DPSACBW027SBOG'
 delinquency = fred.get_series('DRCCLACBS') # Delinquency Rate on Credit Card Loans, All Commercial Banks 
