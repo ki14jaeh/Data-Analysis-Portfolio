@@ -175,7 +175,7 @@ ax1.set_ylabel('Holdings at end of time period (in Billion $)')
 ax1.set_title(f"{country_name}: US Treasury Holdings")
 ```
 
-<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/Saudi%20Arabia%20US%20Treasury%20Holding.png" width="600" />
+<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230907/Saudi%20Arabia%20US%20Treasury%20Holding.png" width="600" />
 
 The selling pressures will lead to bond prices falling, which will inevitably lead to a increase in interest rates.
 
