@@ -124,7 +124,7 @@ plt.show()
 ### Declining Foreign Holdings of US Treasury
 China and Saudi Arabia has been shaving off its holdings of US Treasuries. Though China still holds second most US Treasury Bonds in the world, they have been reducing its exposure to US currency by cutting its holdings[^4]. Now China , lowest since the 2008 financial crisis.
 
-<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/China%20US%20Treasury%20Holdings.png" width="600" />
+<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230907/China%20US%20Treasury%20Holdings.png" width="600" />
 
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/Saudi%20Arabia%20US%20Treasury%20Holding.png" width="600" />
 
