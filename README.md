@@ -1,5 +1,5 @@
-# Data-Analysis-Portfolio
-##About Me
+# Data Analysis Portfolio
+## About Me
 Hi my name is Jay and I am currently working as a Trade Surveilance Risk Analyst in the fixed income space. 
 I am very interested in analyzing macroeconomic data and wanted to use this as a portfolio to practice and demonstrate my analytical capabilities using mostly Python and publicly available data.
 
