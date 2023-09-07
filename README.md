@@ -5,7 +5,7 @@ Crude oil prices are beginning to upside as two of the largest crude exporters, 
 
 <img src="https://github.com/ki14jaeh/inProgress/assets/144283398/745f5f94-a5ad-4c33-b892-92b2dd2d496d" width="600" />
 
-The US 10Y Yield and oil prices are closely correlated. As
+The US 10Y Yield and oil prices are closely correlated. As 
 
 ### Declining Foreign Holdings of US Treasury
 China and Saudi Arabia has been shaving off its holdings of US Treasuries. Though China still holds second most US Treasury Bonds in the world, they have been reducing its exposure to US currency by cutting its holdings[^4]. Now China , lowest since the 2008 financial crisis.
