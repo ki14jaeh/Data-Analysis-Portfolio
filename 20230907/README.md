@@ -2,6 +2,27 @@
 ## 2023/09/07: Inflation and US Economy Outlook
 ### Rising Oil Prices
 Crude oil prices are beginning to upside as two of the largest crude exporters, China and Russia, prolongs their voluntary production cut[^1]. The existing fear of inflation makes the inflationary pressure of rising oil prices particulary pulpable. With the 2024 Presidential Election on the horizon, rising gas prices are critical for President Biden's re-election campaign. Last year, Biden has already utilized 180 mm barrels of the US Petroleum Reserve, which is now at the lowest level since 1983[^2]. The fund has declined by approximately 300 mm barrels since Biden took office[^3]. Though not as high as its 2022 peak, Crude Oil Futures (WTI) has seen a sharp increase in the last couple months.
+'''
+import yfinance as yf
+import matplotlib.pyplot as plt
+from datetime import datetime, timedelta
+
+# Define the ticker symbols
+ticker1 = 'CL=F' #https://finance.yahoo.com/quote/CL=F/
+
+# Calculate the end date as the current date and time
+end_date = datetime.now()
+start_date = end_date - timedelta(days = 365)
+
+# Fetch data for WTI crude oil prices for the specified date range
+data1 = yf.download(ticker1, start=start_date, end=end_date).reset_index()[['Date', 'Adj Close']]
+plt.figure(1)
+plt.plot(data1['Date'], data1['Adj Close'], label='WTI', color='blue')
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.legend()
+plt.show()
+'''
 
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230907/WTI%20Prices.png" width="600" />
 
