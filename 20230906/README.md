@@ -70,6 +70,8 @@ ax3.tick_params(axis='y', labelcolor='red')
 ax2.legend(loc='upper left')
 ax3.legend(loc='upper right')
 
+** Job Market: Stagnant layoffs and declining quitting
+
 # Show the plot
 plt.title('Quit vs. Layoffs (Total Non-Farm)')
 plt.annotate('Source: FRED JOLT', (0,0), (-80,-20), fontsize=6, xycoords='axes fraction', textcoords='offset points', va='top')
