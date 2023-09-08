@@ -42,9 +42,11 @@ plt.axhline(y=delinquency1['Rate_of_Change'].max(), color='red', linestyle='--')
 plt.annotate('Source: FRED', (0,0), (-80,-20), fontsize=6, xycoords='axes fraction', textcoords='offset points', va='top')
 ```
 <img src= 
-"https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230906/YoY%20Growth%20in%20Credit%20Card%20Delinquency.png" 
+"https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230906/YoY%20Growth%20in%20Credit%20Card%20Delinquency.png"
+ width = "600"
   />
 
+** Job Market: Stagnant layoffs and declining quitting
 ```
 jolts2 = fred.get_series('JTSQUR') #Quits: Total Nonfarm
 jolts2 = jolts2.loc["2019-09-01":]
@@ -76,6 +78,10 @@ plt.annotate('Source: FRED JOLT', (0,0), (-80,-20), fontsize=6, xycoords='axes f
 plt.grid()
 plt.show()
 ```
+<img src= 
+"https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230906/Quit%20vs%20Layoffs.png"
+width = "600"
+  />
 
-** Job Market: Stagnant layoffs and declining quitting
+
 
