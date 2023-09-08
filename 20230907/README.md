@@ -181,6 +181,7 @@ ax1.set_title(f"{country_name}: US Treasury Holdings")
 
 The selling pressures will lead to bond prices falling, which will inevitably lead to a increase in interest rates.
 
+
 [^1]: https://www.cnn.com/2023/09/06/business/oil-price-goldman-sachs/index.html
 [^2]: https://finance.yahoo.com/news/biden-replenish-oil-stockpile-3-143540728.html
 [^3]: https://www.cnn.com/2023/05/15/business/biden-administration-oil-strategic-petroleum-reserve/index.html
