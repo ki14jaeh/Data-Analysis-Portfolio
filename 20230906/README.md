@@ -1,6 +1,5 @@
-#
+# Consumer Spending, Deficit, and Job Market
 ## Increasing Deliquency Rate of Credit Card Loans
-ddd
 ```
 import pandas as pd
 from fredapi import Fred
