@@ -46,7 +46,7 @@ plt.annotate('Source: FRED', (0,0), (-80,-20), fontsize=6, xycoords='axes fracti
  width = "600"
   />
 
-** Job Market: Stagnant layoffs and declining quitting
+## Job Market: Stagnant layoffs and declining quitting
 ```
 jolts2 = fred.get_series('JTSQUR') #Quits: Total Nonfarm
 jolts2 = jolts2.loc["2019-09-01":]
