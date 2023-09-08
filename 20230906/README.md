@@ -21,7 +21,8 @@ ax.set_title(" Delinquency Rate on Credit Card Loans, All Commercial Banks ")
 "https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230906/Delinquency%20Rate%20on%20Credit%20Card%20Loans.png"
  width="600" 
   />
-
+  
+## Deliquency Growth Rate YoY at All-Time High
 ```
 # Calculate the rate of change using the 'pct_change' method
 rate_of_change = delinquency.pct_change(periods=4) * 100
@@ -41,8 +42,7 @@ plt.axhline(y=delinquency1['Rate_of_Change'].max(), color='red', linestyle='--')
 plt.annotate('Source: FRED', (0,0), (-80,-20), fontsize=6, xycoords='axes fraction', textcoords='offset points', va='top')
 ```
 <img src= 
-"https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230906/YoY%20Growth%20in%20Credit%20Card%20Delinquency.png"
- width="600" 
+"https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230906/YoY%20Growth%20in%20Credit%20Card%20Delinquency.png" 
   />
 
 ```
@@ -70,11 +70,12 @@ ax3.tick_params(axis='y', labelcolor='red')
 ax2.legend(loc='upper left')
 ax3.legend(loc='upper right')
 
-** Job Market: Stagnant layoffs and declining quitting
-
 # Show the plot
 plt.title('Quit vs. Layoffs (Total Non-Farm)')
 plt.annotate('Source: FRED JOLT', (0,0), (-80,-20), fontsize=6, xycoords='axes fraction', textcoords='offset points', va='top')
 plt.grid()
 plt.show()
 ```
+
+** Job Market: Stagnant layoffs and declining quitting
+
