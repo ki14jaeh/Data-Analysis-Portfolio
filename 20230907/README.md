@@ -1,6 +1,6 @@
-# Economy and Data Analytics Portflio
-## 2023/09/07: Inflation and US Economy Outlook
-### Rising Oil Prices
+
+# Inflation and Bonds
+## Rising Oil Prices
 Crude oil prices are beginning to upside as two of the largest crude exporters, China and Russia, prolongs their voluntary production cut[^1]. The existing fear of inflation makes the inflationary pressure of rising oil prices particulary pulpable. With the 2024 Presidential Election on the horizon, rising gas prices are critical for President Biden's re-election campaign. Last year, Biden has already utilized 180 mm barrels of the US Petroleum Reserve, which is now at the lowest level since 1983[^2]. The fund has declined by approximately 300 mm barrels since Biden took office[^3]. Though not as high as its 2022 peak, Crude Oil Futures (WTI) has seen a sharp increase in the last couple months. WTI closed at $86.87 on 9/6/2023 vs. its 52 week high of $92.64.
 ```
 import yfinance as yf
@@ -121,7 +121,7 @@ plt.show()
 ```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230907/10YUSGG10YR%20vs.%20TLT.png" width="600" />
 
-### Declining Foreign Holdings of US Treasury and US Diplomatic Pressure
+## Declining Foreign Holdings of US Treasury and US Diplomatic Pressure
 China and Saudi Arabia has been shaving off its holdings of US Treasuries. Though China still holds second most US Treasury Bonds in the world, they have been reducing its exposure to US currency by cutting its holdings[^4]. Now China owns $835.4B vs. 938.8B last year (12.4% decline YoY), lowest since the 2008 financial crisis.
 
 Since former president Donald Trump's presidency the United States has taken various actions to slow China's technological advancements. On January 2020, Trump blocked the sale of ASML's litography machines to a Chinese customer. On May 2022 Trump blocked off semiconductor shipments to China's Huawei Technologies. Then in October 2022, Biden administration publishes export controls which included measures to keep China away from chips made anywhere in the world with U.S. Equipment. Recently on August 2023, the United States government imposed additional licensing requirements for products destined to China and some countries in the Middle East, preventing American AI Chip makers like Nvidia and AMD from exporting. The chips from these two companies are crucial in various sectors ranging from customer applications (e.g. smartphones) to military (e.g. satelite imagery). 
