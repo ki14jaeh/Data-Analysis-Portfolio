@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 import matplotlib.pyplot as plt
 
-url8 = 'https://www.federalreserve.gov/releases/lbr/20221231/default.htm'
+url8 = 'https://www.federalreserve.gov/releases/lbr/current/default.htm'
 url7 = 'https://www.federalreserve.gov/releases/lbr/20220930/default.htm'
 url6 = 'https://www.federalreserve.gov/releases/lbr/20220630/default.htm'
 url5 = 'https://www.federalreserve.gov/releases/lbr/20220331/default.htm'
@@ -12,27 +12,45 @@ url3 = 'https://www.federalreserve.gov/releases/lbr/20210930/default.htm'
 url2 = 'https://www.federalreserve.gov/releases/lbr/20210630/default.htm'
 url1 = 'https://www.federalreserve.gov/releases/lbr/20210331/default.htm'
 
-url_column_pairs = [
-    (url1, '2021/03'),
-    (url2, '2021/06'),
-    (url3, '2021/09'),
-    (url4, '2021/12'),
-    (url5, '2022/03'),
-    (url6, '2022/06'),
-    (url7, '2022/09'),
-    (url8, '2022/12')
-]
+html1 = requests.get(url1).content
+df_list1 = pd.read_html(html1)
+df1 = df_list1[1].iloc[:,[0,2,6]]
+df1.rename(columns = {df1.columns[2]: '2021/03'}, inplace = True)
 
-# Initialize an empty dictionary to store the dataframes
-dfs = {}
+html2 = requests.get(url2).content
+df_list2 = pd.read_html(html2)
+df2 = df_list2[1].iloc[:,[0,6]]
+df2.rename(columns = {df2.columns[1]: '2021/06'}, inplace = True)
 
-# Loop through the URL-column pairs
-for url, column_name in url_column_pairs:
-    html = requests.get(url).content
-    df_list = pd.read_html(html)
-    df = df_list[1].iloc[:, [0, 6]]
-    df.rename(columns={df.columns[1]: column_name}, inplace=True)
-    dfs[column_name] = df
+html3 = requests.get(url3).content
+df_list3 = pd.read_html(html3)
+df3 = df_list3[1].iloc[:,[0,6]]
+df3.rename(columns = {df3.columns[1]: '2021/09'}, inplace = True)
+
+html4 = requests.get(url4).content
+df_list4 = pd.read_html(html4)
+df4 = df_list4[1].iloc[:,[0,6]]
+df4.rename(columns = {df4.columns[1]: '2021/12'}, inplace = True)
+
+html5 = requests.get(url5).content
+df_list5 = pd.read_html(html5)
+df5 = df_list5[1].iloc[:,[0,6]]
+df5.rename(columns = {df5.columns[1]: '2022/03'}, inplace = True)
+
+html6 = requests.get(url6).content
+df_list6 = pd.read_html(html6)
+df6 = df_list6[1].iloc[:,[0,6]]
+df6.rename(columns = {df6.columns[1]: '2022/06'}, inplace = True)
+
+html7 = requests.get(url7).content
+df_list7 = pd.read_html(html7)
+df7 = df_list7[1].iloc[:,[0,6]]
+df7.rename(columns = {df7.columns[1]: '2022/09'}, inplace = True)
+
+html8 = requests.get(url8).content
+df_list8 = pd.read_html(html8)
+df8 = df_list8[1].iloc[:,[0,6]]
+df8.rename(columns = {df8.columns[1]: '2022/12'}, inplace = True)
 
 df_list = [df1, df2, df3, df4, df5, df6, df7, df8]
 from functools import reduce
