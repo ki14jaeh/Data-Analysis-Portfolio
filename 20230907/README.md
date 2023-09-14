@@ -76,6 +76,8 @@ plt.show()
 ```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230907/10YUSGG10YR%20vs.%20WTI.png" width="600" />
 
+<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230907/Screenshot%202023-09-13%20223326.png" width="600" />
+
 ```
 # Define the ticker symbols
 ticker1 = '%5ETNX' # 10-Year Treasury Yield
@@ -163,6 +165,7 @@ ax2.set_title(f"{country_name}: US Treasury Holdings")
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230907/China%20US%20Treasury%20Holdings.png" width="600" />
 
 Saudi Arabia voluntarily cutting oil productions and selling off US Treasuries are likely in anticipation of its $500 billion project led by Crown Prince Mohammed Bin Salman. Saudi Armaco, the Saudi Arabian public petroleum and natural gas company is considering selling $50 billion in shares
+
 ```
 fig1, ax1 = plt.subplots(figsize=(12,8))
 
@@ -179,7 +182,7 @@ ax1.set_title(f"{country_name}: US Treasury Holdings")
 
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230907/Saudi%20Arabia%20US%20Treasury%20Holding.png" width="600" />
 
-The selling pressures will lead to bond prices falling, which will inevitably lead to a increase in interest rates.
+The selling pressures will lead to bond prices falling, which will inevitably lead to a increase in interest rates. Earlier this year, the US have increase its debt ceiling and several credit rating agencies have downgraded their credit ratings of the U.S. federal government around that time. The falling bond prices poses a huge threat to the credit of the United States.
 
 
 [^1]: https://www.cnn.com/2023/09/06/business/oil-price-goldman-sachs/index.html
