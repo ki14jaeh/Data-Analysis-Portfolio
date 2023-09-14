@@ -1,5 +1,5 @@
 
-# Inflation and Bonds
+# Oil Futures (WTI), Interest Rates, and Fixed Income (TLT)
 ## Rising Oil Prices
 Crude oil prices are beginning to upside as two of the largest crude exporters, China and Russia, prolongs their voluntary production cut[^1]. With the 2024 Presidential Election on the horizon, rising gas prices is a problem for President Biden's re-election campaign. Last year, Biden has already utilized 180 mm barrels of the US Petroleum Reserve, which is now at the lowest level since 1983[^2]. The fund has declined by approximately 300 mm barrels since Biden took office[^3]. Though not as high as its 2022 peak, Crude Oil Futures (WTI) has seen a sharp increase in the last couple months. WTI closed at $86.87 on 9/6/2023 vs. its 52 week high of $92.64.
 ```
