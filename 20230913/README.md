@@ -98,5 +98,57 @@ plt.show()
 ```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230913/LNC%20NWL%20Share%20Price.png" width="600" />
 
+*VOO: S&P 500 as an investment
+VOO, a popular S&P 500 index fund, is considered top-heavy at the moment. The "S&P 7" - Apple, Microsoft, Amazon, Alphabet, Meta, Tesla, and Nvidia accounts for 27.6% of its total holdings, combined to more than $1 trillion in assets[^2]. 
+
+```
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.ticker as mtick
+
+VOO_top = pd.Series([0.077, 0.068, 0.036, 0.031, 0.028, 0.019, 0.017, 0.016, 0.012, 0.012], 
+                    index=["Apple", "Microsoft", "Alphabet", "Amazon", "Nvidia", "Tesla", "Meta", "Berkshire", "United Health", "Exxon Mobil"]).reset_index()
+
+## Data as of 9/13/2023 via https://institutional.vanguard.com/iippdf/pdfs/FS968R.pdf
+
+df = pd.DataFrame(VOO_top)
+df.columns = ['Name', '% Asset']
+
+# Sort the DataFrame in descending order by '% Asset'
+df = df.sort_values(by='% Asset', ascending=False)
+
+fig, ax = plt.subplots()
+
+# Plot the data
+bars = ax.bar(df['Name'], df['% Asset'], width=0.8, edgecolor="white")
+
+# Format y-axis as percentages
+ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0, decimals=2))
+
+plt.xticks(rotation='vertical')
+
+# Add data labels on top of the bars
+for bar in bars:
+    height = bar.get_height()
+    ax.annotate(f'{height:.2%}',  # The text label
+                xy=(bar.get_x() + bar.get_width() / 2, height),  # Position of the label
+                xytext=(0, 2),  # Offset text by 3 points vertically
+                textcoords="offset points",
+                ha='center',  # Horizontal alignment
+                va='bottom',   # Vertical alignment
+                fontsize=10,   # Font size
+                color='black')  # Font color
+
+# Remove the top and right spines
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
+ax.set_title("Ten largest holdings and % of total net assets")
+
+plt.show()
+```
+<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230913/10%20largest%20voo.png" width="600" />
+
 
 [^1]: https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf
+[^2]: https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230913/2023Q3%20VOO%20Holdings.pdf
