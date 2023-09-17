@@ -8,7 +8,7 @@ Companies included in the S&P 500 index are selected by the index committee who 
 * Sum of its earnings in the previous four quarters must be positive
 
 # S&P Quarterly Rebalance
-On September 1, index provider S&P Dow Jones Indices (SPDJI) announced changes in their U.S. large-cap benchmark. Notable changes include the entrance of world's largest PE firm Blackstone ($BX) and Airbnb ($ABNB) and deletion of insurance company Lincoln National ($LNC) and consumer conglomerate Newell Brands ($NWL).
+On September 1, index provider S&P Dow Jones Indices (SPDJI) announced changes in their U.S. large-cap benchmark. Notable changes include the entrance of world's largest PE firm Blackstone ($BX) and Airbnb ($ABNB) and deletion of insurance company Lincoln National ($LNC) and consumer conglomerate Newell Brands ($NWL)[^2].
 
 ```
 import yfinance as yf
@@ -99,7 +99,7 @@ plt.show()
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230913/LNC%20NWL%20Share%20Price.png" width="600" />
 
 #VOO: S&P 500 as an investment in 2023 Q3
-VOO, a popular S&P 500 index fund, is considered top-heavy at the moment. The "S&P 7" - Apple, Microsoft, Amazon, Alphabet, Meta, Tesla, and Nvidia accounts for 27.6% of its total holdings, combined to more than $1 trillion in assets[^2]. 
+VOO, a popular S&P 500 index fund, is considered top-heavy at the moment. The "S&P 7" - Apple, Microsoft, Amazon, Alphabet, Meta, Tesla, and Nvidia accounts for 27.6% of its total holdings, combined to more than $1 trillion in assets[^3]. 
 
 ```
 import pandas as pd
@@ -151,4 +151,5 @@ plt.show()
 
 
 [^1]: https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf
-[^2]: https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230913/2023Q3%20VOO%20Holdings.pdf
+[^2]: https://www.reuters.com/markets/us/blackstone-airbnb-set-join-sp-500-shares-climb-2023-09-01/
+[^3]: https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230913/2023Q3%20VOO%20Holdings.pdf
