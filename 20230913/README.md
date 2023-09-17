@@ -149,6 +149,51 @@ plt.show()
 ```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230913/10%20largest%20voo.png" width="600" />
 
+Though stock prices consider a company's growth potential, PE ratios of Amazon and Nvidia seem unrealistically high with a PER of 111.01 and 105.96 when compared to the S&P 500 PE ratio of 25.41 (as of Sep. 15, 2023). Amazon stock prices are up 63.59% YTD and Nvidia stock up 206.67% and it is questionable if these mega cap companies are projected to grow at a similar rate with major headwinds like U.S.-China tensions and high interest rates.
+```
+# Data as of 9/15/2023 4:00 PM EDT
+SP7 = pd.Series([29.40, 34.11, 29.10, 111.01, 105.96, 78.04, 35.17], 
+                index=["Apple", "Microsoft", "Alphabet", "Amazon", "Nvidia", "Tesla", "Meta"])
+
+# Create a DataFrame
+df = pd.DataFrame({'Company': SP7.index, 'P/E TTM': SP7.values})
+
+# Sort the DataFrame in descending order by 'P/E TTM'
+df = df.sort_values(by='P/E TTM', ascending=False)
+
+# Create a horizontal bar chart
+fig, ax = plt.subplots(figsize=(8, 6))  # Set the figure size
+
+bars = ax.barh(df['Company'], df['P/E TTM'], color='skyblue')  # Use barh for horizontal bars
+
+# Add labels to the bars
+for bar in bars:
+    width = bar.get_width()
+    ax.annotate(f'{width:.2f}',  # Format the label with two decimal places
+                xy=(width, bar.get_y() + bar.get_height() / 2),
+                xytext=(5, 0),  # 5 points horizontal offset for better alignment
+                textcoords="offset points",
+                ha='left', va='center')
+
+# Set the title and labels
+ax.set_title("S&P 7 P/E TTM (as of Sep 15, 2023)")
+ax.set_xlabel("P/E TTM")
+ax.set_ylabel("Company")
+
+# Remove the top and right spines
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+
+# Add a red vertical line at S&P 500 PE ratio as of 9/15/2023 4:00 PM EDT (as of 9/15/2023 4:00 PM EDT)
+ax.axvline(x=27, color='red', linestyle='--', label='S&P 500 PE Ratio')
+ax.text(15, 6.8, 'S&P 500 PE Ratio', color='red', fontsize=7)
+
+# Show the plot
+plt.tight_layout()  # Ensure that labels fit within the figure
+plt.show()
+```
+<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230913/sp7%20pe%20ttm.png" width="600" />
+
 
 [^1]: https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf
 [^2]: https://www.reuters.com/markets/us/blackstone-airbnb-set-join-sp-500-shares-climb-2023-09-01/
