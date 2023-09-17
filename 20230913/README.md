@@ -6,6 +6,7 @@ Companies included in the S&P 500 index are selected by the index committee who 
 * At least 50% of outstanding shards musty be available for public trading
 * Must report positive earnings int he most recent quarter
 * Sum of its earnings in the previous four quarters must be positive
+
 The S&P 500 tracks the performance of about 500 companies in the U.S. and offers a picture of the health of the 11 sectors it covers and the broader economy.
 
 # S&P Quarterly Rebalance
