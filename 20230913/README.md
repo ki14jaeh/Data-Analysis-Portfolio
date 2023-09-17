@@ -6,6 +6,7 @@ Companies included in the S&P 500 index are selected by the index committee who 
 * At least 50% of outstanding shards musty be available for public trading
 * Must report positive earnings int he most recent quarter
 * Sum of its earnings in the previous four quarters must be positive
+The S&P 500 tracks the performance of about 500 companies in the U.S. and offers a picture of the health of the 11 sectors it covers and the broader economy.
 
 # S&P Quarterly Rebalance
 On September 1, index provider S&P Dow Jones Indices (SPDJI) announced changes in their U.S. large-cap benchmark. Notable changes include the entrance of world's largest PE firm Blackstone ($BX) and Airbnb ($ABNB) and deletion of insurance company Lincoln National ($LNC) and consumer conglomerate Newell Brands ($NWL)[^2].
