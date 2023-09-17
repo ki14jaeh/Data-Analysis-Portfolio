@@ -101,7 +101,7 @@ plt.show()
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230913/LNC%20NWL%20Share%20Price.png" width="600" />
 
 # VOO: S&P 500 as an investment in 2023 Q3
-VOO, a popular S&P 500 index fund, is considered top-heavy at the moment. The "S&P 7" - Apple, Microsoft, Amazon, Alphabet, Meta, Tesla, and Nvidia accounts for 27.6% of its total holdings, combined to more than $1 trillion in assets[^3]. 
+VOO, a popular S&P 500 index fund, is considered top-heavy at the moment. The "S&P 7" - Apple, Microsoft, Amazon, Alphabet, Meta, Tesla, and Nvidia - accounts for 27.6% of its total holdings, combined to more than $1 trillion in assets[^3]. 
 
 ```
 import pandas as pd
