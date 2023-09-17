@@ -124,9 +124,9 @@ plt.show()
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230907/10YUSGG10YR%20vs.%20TLT.png" width="600" />
 
 ## Declining Foreign Holdings of US Treasury and US Diplomatic Pressure
-China and Saudi Arabia has been shaving off its holdings of US Treasuries. Though China still holds second most US Treasury Bonds in the world, they have been reducing its exposure to US currency by cutting its holdings[^4]. Now China owns $835.4B vs. 938.8B last year (12.4% decline YoY), lowest since the 2008 financial crisis.
+China and Saudi Arabia have been shaving off its holdings of US Treasuries. Though China still holds second most US Treasury Bonds in the world, they have been reducing its exposure to US currency by cutting its holdings[^4]. Now China owns $835.4B vs. 938.8B last year (12.4% decline YoY), lowest since the 2008 financial crisis.
 
-Since former president Donald Trump's presidency the United States has taken various actions to slow China's technological advancements. On January 2020, Trump blocked the sale of ASML's litography machines to a Chinese customer. On May 2022 Trump blocked off semiconductor shipments to China's Huawei Technologies. Then in October 2022, Biden administration publishes export controls which included measures to keep China away from chips made anywhere in the world with U.S. Equipment[^5]. Recently on August 2023, the United States government imposed additional licensing requirements for products destined to China and some countries in the Middle East, preventing American AI Chip makers like Nvidia and AMD from exporting[^6]. The chips from these two companies are crucial in various sectors ranging from customer applications (e.g. smartphones) to military (e.g. satelite imagery). China's reduction of its US exposure came with worsening diplomatic relations between the two countries as the U.S. began weaponizing semiconductors. It is said that in an attempt to diversify its holdings, China has been reducing its U.S. dollar assets and investing in safe-haven assets like gold[^7].
+Since former president Donald Trump's presidency, the United States government has taken various actions to slow China's technological advancements. On January 2020, Trump blocked the sale of ASML's litography machines to a Chinese customer. On May 2022 Trump blocked off semiconductor shipments to China's Huawei Technologies. Then on October 2022, Biden administration published export controls which included measures to keep China away from chips made anywhere in the world with U.S. Equipment[^5]. Recently on August 2023, the United States government imposed additional licensing requirements for products destined to China and some countries in the Middle East, preventing American AI Chip makers like Nvidia and AMD from exporting to those regions[^6]. The chips from these two companies are crucial in various sectors ranging from customer applications (e.g. smartphones) to military (e.g. satelite imagery). China's reduction of its US exposure came with worsening diplomatic relations between the two countries as the U.S. began weaponizing semiconductors. It is said that in an attempt to diversify its holdings, China has been reducing its U.S. dollar assets and investing in safe-haven assets like gold[^7].
 ```
 import requests
 import pandas as pd
@@ -164,7 +164,7 @@ ax2.set_title(f"{country_name}: US Treasury Holdings")
 ```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230907/China%20US%20Treasury%20Holdings.png" width="600" />
 
-Saudi Arabia voluntarily cutting oil productions and selling off US Treasuries are likely in anticipation of its $500 billion NEOM project led by Crown Prince Mohammed Bin Salman[^8]. Saudi Armaco, the Saudi Arabian public petroleum and natural gas company is considering selling $50 billion in shares[^9]. 
+Saudi Arabia voluntarily cutting oil productions and selling off US Treasuries are likely in anticipation of its $500 billion NEOM project led by Crown Prince Mohammed Bin Salman[^8]. Recently Saudi Arabia has been attempting to diversify its oil-reliant economy into global sports, tech, and media via Saudi Vision 2030, an ambitious government program launched by the kingdom to increase economic, social, and cultural diversification. Expectedly the project requires a huge amount of cash as there are news of Saudi Armaco, the Saudi Arabian public petroleum and natural gas company, considering selling $50 billion in shares[^9]. 
 
 ```
 fig1, ax1 = plt.subplots(figsize=(12,8))
@@ -182,7 +182,7 @@ ax1.set_title(f"{country_name}: US Treasury Holdings")
 
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230907/Saudi%20Arabia%20US%20Treasury%20Holding.png" width="600" />
 
-The selling and inflationary pressures will lead to bond prices falling, which will inevitably lead to a increase in interest rates. Earlier this year, the US have increase its debt ceiling and several credit rating agencies have downgraded their credit ratings of the U.S. federal government around that time. The falling bond prices poses a huge threat to the credit of the United States.
+The selling and inflationary pressures will lead to bond prices falling, which will inevitably lead to a increase in interest rates. Earlier this year, the US increased its debt ceiling and several credit rating agencies have downgraded their credit ratings of the U.S. federal government around that time. The falling bond prices poses a huge threat to the credit of the United States.
 
 
 [^1]: https://www.cnn.com/2023/09/06/business/oil-price-goldman-sachs/index.html
