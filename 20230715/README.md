@@ -6,7 +6,7 @@ from fredapi import Fred
 import matplotlib.pyplot as plt
 
 # replace 'YOUR_API_KEY' with your actual FRED API key
-key = 'fe9f42b07c731caccc44b8a79c0d16df'
+key = 'YOUR_API_KEY'
 fred = Fred(api_key=key)
 
 # retrieve data for the series 'FYFSD'
