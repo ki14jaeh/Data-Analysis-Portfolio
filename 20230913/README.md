@@ -199,7 +199,7 @@ plt.show()
 # Focus on the Interest Coverage Ratio
 As the likelihood that the Fed will raise interest rates once again increases, stock markets dropped on the week of Sept. 25, 2023. In a high interest environment it is crucial to consider the interest expenses that may impact a company's bottom line. A company's Interest Coverage Ratio is a common metric used to determine if a company is capable of paying the interest on its outstanding debt. Among companies included in the S&P 500 that have released earnings after June 30, 2023, the median Interest Coverage Ratio is 15.3125. 
 
-$Interest Coverage Ratio = \frac{EBIT}{Interest Expense}$
+Interest Coverage Ratio = EBIT / (Interest Expense)
 
 ```
 import pandas as pd
@@ -243,16 +243,18 @@ ax.axline((0, 0), slope=IE2023Q3Avg, color='black', linestyle = "--")
 ax.set(title = "S&P 500 Interest Expense and EBIT (2023 Q3)",
        xlabel = 'Interest Expense',
        ylabel = 'EBIT')
-
 ```
+<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230913/Screenshot%202023-09-27%20210104.png" width="600" />
 
+
+There are 20 companies that have a higher Interest Coverage Ratio than that of its peer median including $SNPS, $TJX, and $ADBE. The full list can be found below:
 ```
 df = IE2023Q3[IE2023Q3['Interest Coverage Ratio'] > IE2023Q3Avg]
 df = df.sort_values(by='Interest Coverage Ratio', ascending = False)
 pd.options.display.float_format = '{:,.2f}'.format
 df
 ```
-
+<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230913/Screenshot%202023-09-27%20205842.png" width="600" />
 
 
 [^1]: https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf
