@@ -196,6 +196,64 @@ plt.show()
 ```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20230913/sp7%20pe%20ttm.png" width="600" />
 
+# Focus on the Interest Coverage Ratio
+As the likelihood that the Fed will raise interest rates once again increases, stock markets dropped on the week of Sept. 25, 2023. In a high interest environment it is crucial to consider the interest expenses that may impact a company's bottom line. A company's Interest Coverage Ratio is a common metric used to determine if a company is capable of paying the interest on its outstanding debt. Among companies included in the S&P 500 that have released earnings after June 30, 2023, the median Interest Coverage Ratio is 15.3125. 
+
+Interest Coverage Ratio = \frac{EBIT}{Interest Expense}
+
+```
+import pandas as pd
+from yahooquery import Ticker
+import matplotlib.pyplot as plt
+import numpy as np
+
+url = 'https://en.wikipedia.org/wiki/List_of_S%26P_500_companies'
+data = pd.read_html(url)
+
+# Get current S&P table and set header column
+sp500 = data[0].iloc[:, [0, 1, 6]]
+sp500.columns = ['ticker', 'name', 'date']
+
+# Convert the 'date' column to strings
+sp500['date'] = sp500['date'].astype(str)
+
+# Filter rows where the 'date' column doesn't match the format 'yyyy-mm-dd'
+mask = sp500['date'].str.strip().str.match(r'\d{4}-\d{2}-\d{2}')
+sp500_filtered = sp500[~mask]
+
+sp500_ticker = sp500_filtered['ticker'].to_numpy()
+
+InterestExpense = pd.DataFrame(Ticker(sp500_ticker).income_statement()[['asOfDate', 'InterestExpense', 'EBIT']])
+InterestExpense['Interest Coverage Ratio'] = InterestExpense['EBIT']/InterestExpense['InterestExpense']
+InterestExpense['asOfDate'] = pd.to_datetime(InterestExpense['asOfDate'])
+
+#Average S&P 500 Interest Coverage Ratio (2023Q2)
+IE2023Q3 = InterestExpense[InterestExpense['asOfDate'] > pd.to_datetime("2023-06-30")]
+IE2023Q3Avg = IE2023Q3['Interest Coverage Ratio'].median()
+
+
+fig, ax = plt.subplots()
+plt.xlim([0, IE2023Q3['InterestExpense'].max()+5e8])
+plt.ylim([0, IE2023Q3['EBIT'].max()+5e8])
+x = np.arange(0, 3, 0.1)*1e10
+ax.fill_between(x, IE2023Q3Avg*x, 2.5e10, color = 'DodgerBlue')
+ax.fill_between(x, IE2023Q3Avg*x, 0, color='Crimson')
+ax.scatter(IE2023Q3['InterestExpense'], IE2023Q3['EBIT'], color = 'black')
+ax.axline((0, 0), slope=IE2023Q3Avg, color='black', linestyle = "--")
+ax.set(title = "S&P 500 Interest Expense and EBIT (2023 Q3)",
+       xlabel = 'Interest Expense',
+       ylabel = 'EBIT')
+
+```
+
+```
+df = IE2023Q3[IE2023Q3['Interest Coverage Ratio'] > IE2023Q3Avg]
+df = df.sort_values(by='Interest Coverage Ratio', ascending = False)
+pd.options.display.float_format = '{:,.2f}'.format
+df
+```
+
+
 
 [^1]: https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf
 [^2]: https://www.reuters.com/markets/us/blackstone-airbnb-set-join-sp-500-shares-climb-2023-09-01/
