@@ -199,7 +199,7 @@ plt.show()
 # Focus on the Interest Coverage Ratio
 As the likelihood that the Fed will raise interest rates once again increases, stock markets dropped on the week of Sept. 25, 2023. In a high interest environment it is crucial to consider the interest expenses that may impact a company's bottom line. A company's Interest Coverage Ratio is a common metric used to determine if a company is capable of paying the interest on its outstanding debt. Among companies included in the S&P 500 that have released earnings after June 30, 2023, the median Interest Coverage Ratio is 15.3125. 
 
-Interest Coverage Ratio = \frac{EBIT}{Interest Expense}
+$Interest Coverage Ratio = \frac{EBIT}{Interest Expense}$
 
 ```
 import pandas as pd
