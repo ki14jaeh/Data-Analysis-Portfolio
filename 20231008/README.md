@@ -1,7 +1,7 @@
 # U.S. 10 Year Treasury Rate
 Rapid sell-off of U.S. government bonds sent yields to its highest level in 16 years.
 
-'''
+```
 import yfinance as yf
 import matplotlib.pyplot as plt
 from datetime import datetime, timedelta
@@ -25,10 +25,10 @@ plt.annotate(f'Max: {max_value:.2f}',
 plt.gca().spines['top'].set_visible(False)
 plt.gca().spines['right'].set_visible(False)
 plt.show()
-'''
+```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231008/US%2010YR.png" width="600" />
 
-'''
+```
 # Define the ticker symbols
 ticker1 = 'IEF'
 ticker2 = '%5ETNX'  # 10-Year Treasury Yield
@@ -70,9 +70,9 @@ ax1.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))  # Format x-axis label
 plt.title('iShares 7-10 Year Treasury Bond ETF vs. US 10-Year Treasury Yield')
 plt.grid()
 plt.show()
-'''
+```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231008/Bond%20Price%20Yield.png" width="600" />
-'''
+```
 USD = 'DX-Y.NYB' #ICE US Dollar Index
 start_date = end_date - timedelta(days=365)
 
@@ -84,9 +84,9 @@ plt.legend()
 plt.gca().spines['top'].set_visible(False)
 plt.gca().spines['right'].set_visible(False)
 plt.show()
-'''
+```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231008/USD.png" width="600" />
-'''
+```
 VIX = '^VIX' #Volatility Index
 start_date = end_date - timedelta(days=365)
 
@@ -98,5 +98,5 @@ plt.legend()
 plt.gca().spines['top'].set_visible(False)
 plt.gca().spines['right'].set_visible(False)
 plt.show()
-'''
+```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231008/VIX.png" width="600" />
