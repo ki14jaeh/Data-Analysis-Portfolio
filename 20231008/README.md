@@ -1,5 +1,6 @@
 # U.S. 10 Year Treasury Rate
 Rapid sell-off of U.S. government bonds sent yields to its highest level in 16 years.
+
 '''
 import yfinance as yf
 import matplotlib.pyplot as plt
