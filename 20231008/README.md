@@ -1,5 +1,6 @@
-# U.S. 10 Year Treasury Rate
-Rapid sell-off of U.S. government bonds sent yields to its highest level in 16 years. Yields for U.S. 10 Year Treasuries reached 4.80%, which is higher than that of the 2008 Financial Crisis. Federal Reserve won’t stop raising interest rates until it sees a cooling labor market.
+# Inverted Yield Curve and Strong Labor Market
+## U.S. 10 Year Treasury Rate
+Rapid sell-off of U.S. government bonds sent yields to its highest level in 16 years. Yields for U.S. 10 Year Treasuries reached 4.80%, which is higher than that of the 2008 Financial Crisis, indicating fear of higher rates from the Federal Reserve. 
 
 ```
 import yfinance as yf
@@ -28,6 +29,7 @@ plt.show()
 ```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231008/US%2010YR.png" width="600" />
 
+## Bond Price and Yield (IEF v. TNX)
 Bond prices and yield have an inverse relationship because bonds are sold with a face value and fixed coupon rate. If a bond's price increases, then its yield - the bond's coupon yield divided by its current market price - decreases. The graph below displays the inverse relationship between the U.S. 10 Year Treasury Rate and iShares 7-10 Year Treasury Bond ETF (IEF)
 
 ```
@@ -75,7 +77,7 @@ plt.show()
 ```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231008/Bond%20Price%20Yield.png" width="600" />
 
-# Bond Yields and Foreign Exchange
+## Bond Yields and Foreign Exchange
 Lower bond prices and higher interest rates often attract foreign investors, increasing the demand for U.S. dollars on the foreign exchange market to purchase U.S. bonds. Empiracally, the U.S. Dollar Index has significantly increased in the past couple months. The dollar has seen a strong decline in 1H 2023 as there have been internaional movement to de-dollarize global trade, fueling concerns that the U.S. dollar may lose its status as the world's reserve currency. For instance, during the 2023 BRICS (Brazil, Russia, India, China, and South Africa) Summit in Johannesburg this past August, Brazilan president Luiz Inacio Lula da Silva proposed to create a common currency for trade and investment between each other to reduce its vulnerability to U.S. dollar rate fluctuations. 
 
 ```
@@ -93,7 +95,7 @@ plt.show()
 ```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231008/USD.png" width="600" />
 
-# High Volatility and Selloff of U.S. Stocks
+## High Volatility and Selloff of U.S. Stocks
 High interest rates and strong dollar weighs down on multinational companies. 
 ```
 VIX = '^VIX' #Volatility Index
@@ -110,7 +112,8 @@ plt.show()
 ```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231008/VIX.png" width="600" />
 
-# Inverted Yield Curve
+## Inverted Yield Curve
+An inverted yield curve, in which longer-term bonds have a lower yield than short-term, is often regarded as a leading indicator of a looming economic recession. 
 ```
 # Replace 'YOUR_API_KEY' with your actual FRED API key
 key = 'YOUR_API_KEY'
@@ -145,3 +148,30 @@ plt.legend()
 plt.show()
 ```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231008/10Yr%203%20Mo.png" width="600" />
+
+```
+import matplotlib.pyplot as plt
+import pandas as pd
+import quandl as ql
+
+# Fetch Treasury yield data
+yield_data = ql.get("USTREASURY/YIELD")
+
+# Select the rows for today, a month ago, and a year ago
+today = yield_data.iloc[-1, :]
+month_ago = yield_data.iloc[-30, :]
+year_ago = yield_data.iloc[-365, :]
+
+# Create a DataFrame with the selected data
+df = pd.concat([today, month_ago, year_ago], axis=1)
+df.columns = ['today', 'month_ago', 'year_ago']
+
+# Plot the Treasury yield curve
+plt.figure(figsize=(10, 6))
+df.plot(style={'today': 'ro-', 'month_ago': 'bx--', 'year_ago': 'g^--'}, title='Treasury Yield Curve, % (Today, 1 Mo ago, 1 Yr ago)')
+plt.xlabel("Maturity (Years)")
+plt.ylabel("Yield (%)")
+plt.grid(True)
+plt.show()
+```
+<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231008/Yield%20Curve%20Today%201%20Mo%201%20Yr.png" width="600" />
