@@ -1,5 +1,5 @@
 # U.S. 10 Year Treasury Rate
-Rapid sell-off of U.S. government bonds sent yields to its highest level in 16 years.
+Rapid sell-off of U.S. government bonds sent yields to its highest level in 16 years. Yields for U.S. 10 Year Treasuries reached 4.80%, which is higher than that of the 2008 Financial Crisis. Federal Reserve won’t stop raising interest rates until it sees a cooling labor market.
 
 ```
 import yfinance as yf
@@ -27,6 +27,8 @@ plt.gca().spines['right'].set_visible(False)
 plt.show()
 ```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231008/US%2010YR.png" width="600" />
+
+Bond prices and yield have an inverse relationship because bonds are sold with a face value and fixed coupon rate. If a bond's price increases, then its yield - the bond's coupon yield divided by its current market price - decreases. The graph below displays the inverse relationship between the U.S. 10 Year Treasury Rate and iShares 7-10 Year Treasury Bond ETF (IEF)
 
 ```
 # Define the ticker symbols
@@ -72,6 +74,10 @@ plt.grid()
 plt.show()
 ```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231008/Bond%20Price%20Yield.png" width="600" />
+
+# Bond Yields and Foreign Exchange
+Lower bond prices and higher interest rates often attract foreign investors, increasing the demand for U.S. dollars on the foreign exchange market to purchase U.S. bonds. Empiracally, the U.S. Dollar Index has significantly increased in the past couple months. The dollar has seen a strong decline in 1H 2023 as there have been internaional movement to de-dollarize global trade, fueling concerns that the U.S. dollar may lose its status as the world's reserve currency. For instance, during the 2023 BRICS (Brazil, Russia, India, China, and South Africa) Summit in Johannesburg this past August, Brazilan president Luiz Inacio Lula da Silva proposed to create a common currency for trade and investment between each other to reduce its vulnerability to U.S. dollar rate fluctuations. 
+
 ```
 USD = 'DX-Y.NYB' #ICE US Dollar Index
 start_date = end_date - timedelta(days=365)
@@ -86,6 +92,9 @@ plt.gca().spines['right'].set_visible(False)
 plt.show()
 ```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231008/USD.png" width="600" />
+
+# High Volatility and Selloff of U.S. Stocks
+High interest rates and strong dollar weighs down on multinational companies. 
 ```
 VIX = '^VIX' #Volatility Index
 start_date = end_date - timedelta(days=365)
@@ -100,3 +109,39 @@ plt.gca().spines['right'].set_visible(False)
 plt.show()
 ```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231008/VIX.png" width="600" />
+
+# Inverted Yield Curve
+```
+# Replace 'YOUR_API_KEY' with your actual FRED API key
+key = 'YOUR_API_KEY'
+fred = Fred(api_key=key)
+
+# Retrieve data for the series 'T10Y3M'
+T10Y3M = fred.get_series('T10Y3M')  # 10-Year Treasury Constant Maturity Minus 3-Month Treasury Constant Maturity
+
+# Create a DataFrame from the data
+df = pd.DataFrame({'Date': T10Y3M.index, 'Value': T10Y3M.values})
+
+# Extract the year from the date
+df['Year'] = df['Date'].dt.year
+
+# Define recession years
+recession_years = [2020, 2008, 2001, 1990]
+
+# Create the plot
+fig, ax = plt.subplots(figsize=(12, 8))
+ax.plot(df['Date'], df['Value'])
+plt.axhline(y=0, color='black')
+ax.set_ylabel('Percent')
+ax.set_title("10-Year Treasury Constant Maturity Minus 3-Month Treasury Constant Maturity")
+
+# Highlight recession years
+for year in recession_years:
+    recession_df = df[df['Year'] == year]
+    plt.fill_between(recession_df['Date'], 0, recession_df['Value'], alpha=0.3, label=f'Recession Year {year}')
+
+# Show the legend
+plt.legend()
+plt.show()
+```
+<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231008/10Yr%203%20Mo.png" width="600" />
