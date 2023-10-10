@@ -113,7 +113,9 @@ plt.show()
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231008/VIX.png" width="600" />
 
 ## Inverted Yield Curve
-An inverted yield curve, in which longer-term bonds have a lower yield than short-term, is often regarded as a leading indicator of a looming economic recession. 
+### Credit Spread (3 month vs. 10 year)
+An inverted yield curve, in which longer-term bonds have a lower yield than short-term, is often regarded as a leading indicator of a looming economic recession. In the last three decades there were four notable recessions in the United States: (1) 1990s recession, (2) Collapse of the Dot-com bubble in early 2000s, (3) Global Financial Crisis in 2008, and (4) COVID-19 Recession in 2020. In the graph below using the FRED credit spread data, we can see that the spread between 10-Year and 3-month Treasury Constant Maturities dips below zero (i.e. inverted yield curve) before each of the four recessionary periods. The yield curve started inverting on July 2022 and has been inverted since.
+
 ```
 # Replace 'YOUR_API_KEY' with your actual FRED API key
 key = 'YOUR_API_KEY'
@@ -148,6 +150,13 @@ plt.legend()
 plt.show()
 ```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231008/10Yr%203%20Mo.png" width="600" />
+
+### Flattening yield curve
+Coming back from its lowest level since the 1980s, the credit spread between long-term and short-term treasuries are tightening. Comparing the yield curve today to last month, its evident that the yield curve has flattened in recent days. To explain the changes in the yield curve, there are 2 avenues: (1) Short term yield on the left, which is driven by the Federal Reserve, and (2) Long term yield on the right, which is driven by investor sentiment. 
+
+Short-term yield: In an economic recession, the Federal Reserve would decrease interest rates (i.e. yield) to encourage borrowing. In an economic expansion, they would increase rates to limit inflation and prevent people and institutions from borrowing too much. 
+
+Long-term yield: In an economic recession (or an expectation thereof), investors would pull their money out of riskier assets (e.g. stocks) to park their money in long-term bonds, which are considered less risky. In an economic recession, investor would invest in riskier assets. Since bond yields and prices inversely related, a higher demand in long-term bonds amidst fearful investing environment would push the right side of the yield curve down. 
 
 ```
 import matplotlib.pyplot as plt
