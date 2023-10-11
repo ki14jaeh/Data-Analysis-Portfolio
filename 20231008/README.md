@@ -1,7 +1,6 @@
 # Inverted Yield Curve and Strong Labor Market
 ## U.S. 10 Year Treasury Rate
-Rapid sell-off of U.S. government bonds sent yields to its highest level in 16 years. Yields for U.S. 10 Year Treasuries reached 4.80%, which is higher than that of the 2008 Financial Crisis, indicating fear of higher rates from the Federal Reserve. 
-
+Rapid sell-off of U.S. government bonds sent yields to its highest level in 16 years. Yields for U.S. 10 Year Treasuries reached 4.80% early October 2023, which is higher than that of the 2008 Financial Crisis, indicating fear of higher rates from the Federal Reserve and U.S. consumers expecting inflation to increase in the near- and medium-term. This is in line with a recent survey by the Federal Reserve Bank of New York that observed an increase in the median one-, three-year ahead expected inflation rate but a decrease in the five-year ahead rate. Inflation expectations play an important role in the economy in that the actual inflation rate partially depends on it. If the expected inflation are "anchored" well, the Federal Reserve could employ more agressive monetary policies to combat recession. 
 ```
 import yfinance as yf
 import matplotlib.pyplot as plt
@@ -30,7 +29,7 @@ plt.show()
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231008/US%2010YR.png" width="600" />
 
 ## Bond Price and Yield (IEF v. TNX)
-Bond prices and yield have an inverse relationship because bonds are sold with a face value and fixed coupon rate. If a bond's price increases, then its yield - the bond's coupon yield divided by its current market price - decreases. The graph below displays the inverse relationship between the U.S. 10 Year Treasury Rate and iShares 7-10 Year Treasury Bond ETF (IEF)
+Bond prices and yield have an inverse relationship because bonds are sold with a face value and fixed coupon rate. If a bond's price increases, then its yield - the bond's coupon yield divided by its current market price - decreases. The graph below displays the inverse relationship between the U.S. 10 Year Treasury Rate and iShares 7-10 Year Treasury Bond ETF (IEF).
 
 ```
 # Define the ticker symbols
@@ -78,7 +77,7 @@ plt.show()
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231008/Bond%20Price%20Yield.png" width="600" />
 
 ## Bond Yields and Foreign Exchange
-Lower bond prices and higher interest rates often attract foreign investors, increasing the demand for U.S. dollars on the foreign exchange market to purchase U.S. bonds. Empiracally, the U.S. Dollar Index has significantly increased in the past couple months. The dollar has seen a strong decline in 1H 2023 as there have been internaional movement to de-dollarize global trade, fueling concerns that the U.S. dollar may lose its status as the world's reserve currency. For instance, during the 2023 BRICS (Brazil, Russia, India, China, and South Africa) Summit in Johannesburg this past August, Brazilan president Luiz Inacio Lula da Silva proposed to create a common currency for trade and investment between each other to reduce its vulnerability to U.S. dollar rate fluctuations. A strong dollar will hold down inflation by making imported goods cheaper for U.S. consumers. However this is a major negative for emerging markets 
+Lower bond prices and higher interest rates often attract foreign investors, increasing the demand for U.S. dollars on the foreign exchange market to purchase U.S. bonds. Empiracally, the U.S. Dollar Index has significantly increased in the past couple months. The dollar has seen a strong decline in 1H 2023 as there have been internaional movement to de-dollarize global trade, fueling concerns that the U.S. dollar may lose its status as the world's reserve currency. For instance, during the 2023 BRICS (Brazil, Russia, India, China, and South Africa) Summit in Johannesburg this past August, Brazilan president Luiz Inacio Lula da Silva proposed to create a common currency for trade and investment between each other to reduce its vulnerability to U.S. dollar rate fluctuations. A strong dollar will hold down inflation by making imported goods cheaper for U.S. consumers. However this is a major negative for emerging markets as developing nations are more vulnerable to inflation and foreign investment in emerging markets might become less attractive. 
 
 ```
 USD = 'DX-Y.NYB' #ICE US Dollar Index
@@ -96,7 +95,7 @@ plt.show()
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231008/USD.png" width="600" />
 
 ## High Volatility and Selloff of U.S. Stocks
-High interest rates and strong dollar weighs down on multinational companies. 
+High interest rates and strong dollar weighs down on multinational Ameerican companies, negatively impacting its corporate earnings. This fearful sentiment is reflected via the volatility index (VIX) and recent drop in U.S. stock prices.
 ```
 VIX = '^VIX' #Volatility Index
 start_date = end_date - timedelta(days=365)
