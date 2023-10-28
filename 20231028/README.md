@@ -1,6 +1,7 @@
-# Underperforming Bank Stocks Amid Bank Sector Beating
+# Bank Sector Beating Amid Higher-for-Longer Rate Environment
 ## The "Big 4" Banks: JP Morgan, Bank of America, Wells Fargo, Citi Group
 ### Stock
+As interest rates continue to rise and the Fed remains hawkish, investors are expecting loan demands to weaken, narrowing banks' net interest income. Bank of America stocks fell to its three-year-low to $25.17 (lowest since Covid-19 shock) due to its biggest sell off since March of this year (2023 U.S. Banking Crisis). J.P. Morgan stocks also sank 3.5% as news broke that CEO Jamie Dimon and his family plan to sell about 1 million shares "for financial diversification and tax-planning purposes."
 ```
 import yfinance as yf
 import matplotlib.pyplot as plt
