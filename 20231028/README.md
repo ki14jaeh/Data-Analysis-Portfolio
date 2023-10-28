@@ -1,3 +1,6 @@
+# Underperforming Bank Stocks Amid Bank Sector Beating
+## The "Big 4" Banks: JP Morgan, Bank of America, Wells Fargo, Citi Group
+### Stock
 ```
 import yfinance as yf
 import matplotlib.pyplot as plt
@@ -42,6 +45,7 @@ plt.show()
 ```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231028/Stock%20B4.png" width="600" />
 
+### Price-to-Book Ratio
 ```
 data = {
     "Bank": ["JP Morgan", "Bank of America", "Wells Fargo", "Citi"],
