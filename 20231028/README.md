@@ -40,6 +40,7 @@ plt.legend()
 plt.grid()
 plt.show()
 ```
+<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231028/Stock%20B4.png" width="600" />
 
 ```
 data = {
@@ -96,3 +97,4 @@ plt.gca().spines['right'].set_visible(False)
 # Display the chart
 plt.show()
 ```
+<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231028/PB%20Big%204.png" width="600" />
