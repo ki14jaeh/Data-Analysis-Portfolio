@@ -91,6 +91,7 @@ plt.show()
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231028/Stock%20%25%20change%20B4.png" width="600" />
 
 ### Price-to-Book Ratio
+A price-to-book (P/B) ratio is often used as a valuation metric in the bankinjg industry because it is more relevant than the commonly used price-to-earnings (P/E) ratio. A P/B ratio below 1 suggests that a company's stock is trading at a discount to its book value. For banks, loans are considered assets while deposits are considered liabilities. Due to this unique business model, a bank's book value tells us more of a bank's financial health than its earnings. Furthermore, because banks' earnings are significantly impacted by exogenous macroeconomic factors such as interest rates and inflation, P/B ratio is considered more reliable than a P/E ratio. 
 ```
 data = {
     "Bank": ["JP Morgan", "Bank of America", "Wells Fargo", "Citi"],
