@@ -1,7 +1,7 @@
 # Bank Sector Beating Amid Higher-for-Longer Rate Environment
 ## The "Big 4" Banks: JP Morgan, Bank of America, Wells Fargo, Citi Group
 ### Stock
-As interest rates continue to rise and the Fed remains hawkish, investors are expecting loan demands to weaken, narrowing banks' net interest income. Bank of America stocks fell to its three-year-low to $25.17 (lowest since Covid-19 shock) due to its biggest sell off since March of this year (2023 U.S. Banking Crisis). J.P. Morgan stocks also sank 3.5% as news broke that CEO Jamie Dimon and his family plan to sell about 1 million shares "for financial diversification and tax-planning purposes."
+As interest rates continue to rise and the Fed remains hawkish, investors are expecting loan demands to weaken, narrowing banks' net interest income. Bank of America stocks fell to its three-year-low to $25.17 (lowest since Covid-19 shock) due to its biggest sell off since March of this year (2023 U.S. Banking Crisis). J.P. Morgan stocks also sank 3.5% to $135.69 as news broke that CEO Jamie Dimon and his family plan to sell about 1 million shares "for financial diversification and tax-planning purposes."
 ```
 import yfinance as yf
 import matplotlib.pyplot as plt
@@ -45,6 +45,50 @@ plt.grid()
 plt.show()
 ```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231028/Stock%20B4.png" width="600" />
+
+```
+from datetime import datetime, timedelta
+from matplotlib.ticker import FuncFormatter
+
+# Define the ticker symbols
+ticker1 = 'JPM'
+ticker2 = 'BAC'
+ticker3 = 'WFC'
+ticker4 = 'C'
+
+# Calculate the end date as the current date and time
+end_date = datetime.now()
+start_date = end_date - timedelta(days=120)
+
+# Fetch data for the specified date range
+data1 = yf.download(ticker1, start=start_date, end=end_date).reset_index()
+data2 = yf.download(ticker2, start=start_date, end=end_date).reset_index()
+data3 = yf.download(ticker3, start=start_date, end=end_date).reset_index()
+data4 = yf.download(ticker4, start=start_date, end=end_date).reset_index()
+
+# Calculate the percentage changes from the start date
+data1['Percent Change'] = (data1['Adj Close'] / data1['Adj Close'].iloc[0] - 1) * 100
+data2['Percent Change'] = (data2['Adj Close'] / data2['Adj Close'].iloc[0] - 1) * 100
+data3['Percent Change'] = (data3['Adj Close'] / data3['Adj Close'].iloc[0] - 1) * 100
+data4['Percent Change'] = (data4['Adj Close'] / data4['Adj Close'].iloc[0] - 1) * 100
+
+# Plot the percentage changes
+plt.figure(figsize=(12, 6))
+plt.plot(data1['Date'], data1['Percent Change'], label=ticker1)
+plt.plot(data2['Date'], data2['Percent Change'], label=ticker2)
+plt.plot(data3['Date'], data3['Percent Change'], label=ticker3)
+plt.plot(data4['Date'], data4['Percent Change'], label=ticker4)
+
+plt.title('Percentage Change from Start Date')
+plt.xlabel('Date')
+plt.ylabel('Percentage Change')
+plt.legend()
+plt.grid(True)
+plt.gca().yaxis.set_major_formatter(FuncFormatter(lambda x, _: f'{x:.0f}%'))
+
+plt.show()
+```
+<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231028/Stock%20%25%20change%20B4.png" width="600" />
 
 ### Price-to-Book Ratio
 ```
