@@ -140,5 +140,5 @@ plt.legend()
 plt.show()
 ```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231204/Consumer%20spending.png" width="800" />
-Total Personal Consumption Expenditure also grew with increased spending from goods and services. 
+Total Personal Consumption Expenditure as a result of increased spending from goods and services. Though interest rates remain high, personal consumption remains high, shrugging off the theoretical impact of a hawkish Fed policy. 
 
