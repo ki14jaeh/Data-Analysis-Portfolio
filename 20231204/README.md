@@ -122,9 +122,9 @@ fig, ax = plt.subplots()
 
 # Plot Annual Personal Consumption Data on the same y-axis
 plt.plot(PC_recent_quarterly['TimePeriod'].tail(10), PC_recent_quarterly['DataValue'].tail(10), color='green',
-         label="Total", marker='o')
-plt.plot(goods_recent_quarterly['TimePeriod'].tail(10), goods_recent_quarterly['DataValue'].tail(10), color='red',
          label="Goods", marker='o')
+plt.plot(goods_recent_quarterly['TimePeriod'].tail(10), goods_recent_quarterly['DataValue'].tail(10), color='red',
+         label="Total", marker='o')
 plt.plot(services_recent_quarterly['TimePeriod'].tail(10), services_recent_quarterly['DataValue'].tail(10), color='blue',
          label="Services", marker='o')
 
