@@ -60,6 +60,8 @@ fullyear = fullyear.reset_index()
 final2 = pd.merge(separate_df, fullyear, left_index=True, right_index=True, suffixes=('_left', '_right'))
 final2 = final2[['Year Range', 'Adj Close']]
 ```
+The following chart shows the respective performance for each year. 
+
 | Year     | Halloween Investing (Nov. - Apr., %) | Rest (May - Oct., %) |
 | -------- |:--------------------------:|:------------------:|
 | 1985     | 22.97                      | 3.75               |
