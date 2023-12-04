@@ -71,8 +71,8 @@ ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 plt.show()
 ```
-
-## Consumer Spending
+<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231204/GDP%20and%20PC.png" width="800" />
+2023Q3 GDP showed 5.20% growth at an annualized rate last quarter, which is the fastest it has grown since 2021Q4. Consumer spending also rose to 3.60%, which was lower than the expected 4.0%. 
 ```
 url2 = f'https://apps.bea.gov/api/data/?UserID={user_id}&method=GetData&DataSetName=NIPA&TableName=T20303&Frequency=A,Q&Year=All&ResultFormat=JSON'
 response = requests.get(url2)
@@ -121,10 +121,10 @@ goods_recent_quarterly['DataValue'] = pd.to_numeric(goods_recent_quarterly['Data
 fig, ax = plt.subplots()
 
 # Plot Annual Personal Consumption Data on the same y-axis
-plt.plot(PC_recent_quarterly['TimePeriod'].tail(10), PC_recent_quarterly['DataValue'].tail(10), color='green',
-         label="Goods", marker='o')
 plt.plot(goods_recent_quarterly['TimePeriod'].tail(10), goods_recent_quarterly['DataValue'].tail(10), color='red',
          label="Total", marker='o')
+plt.plot(PC_recent_quarterly['TimePeriod'].tail(10), PC_recent_quarterly['DataValue'].tail(10), color='green',
+         label="Goods", marker='o')
 plt.plot(services_recent_quarterly['TimePeriod'].tail(10), services_recent_quarterly['DataValue'].tail(10), color='blue',
          label="Services", marker='o')
 
@@ -137,6 +137,6 @@ plt.title('PCE, Goods and Services (last 10 quarters)')
 plt.legend()
 plt.show()
 ```
-
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231204/Consumer%20spending.png" width="800" />
+Total Personal Consumption Expenditure also grew with increased spending from goods and services. 
 
