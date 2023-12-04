@@ -1,5 +1,5 @@
 # Halloween Strategy
-## Halloween Strategy (Nov.1 - Apr. 31 vs. May 1 - Oct. 31) Performance
+## Halloween Strategy (Nov. 1 - Apr. 30 vs. May 1 - Oct. 31) Performance
 The Halloween effect is a strategy based on the hypothesis that the market performs better from November to next year April compared to the market from May through October. You can find academic studies done on this hypothesis (e.g. [The Halloween effect: Trick or Treat](https://www.sciencedirect.com/science/article/abs/pii/S1057521910000608)). Today we will explore whether the performance difference is statistically significant. 
 
 ```
