@@ -1,6 +1,6 @@
 # GDP and Spending Reports
 ## GDP
-The following code grabs the Percent Change From Preceding Period in Real Gross Domestic Product (GDP). GDP and its growth rate is often used as an indicator of a country's economic health. It is the total market value of goods and services from that country. GDP(Y) is often denoted as a sum of consumption(C), investments(I), government expenditures(G), and net exports(X-M).
+GDP and its growth rate is often used as an indicator of a country's economic health. It is the total market value of goods and services from that country. GDP(Y) is often denoted as a sum of consumption(C), investments(I), government expenditures(G), and net exports(X-M). The following code grabs the Percent Change From Preceding Period in Real Gross Domestic Product (GDP). 
 
 $Y = C + I +G +(X-M)$
 
