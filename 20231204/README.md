@@ -72,7 +72,9 @@ ax.spines['right'].set_visible(False)
 plt.show()
 ```
 <img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231204/GDP%20and%20PC.png" width="800" />
+
 2023Q3 GDP showed 5.20% growth at an annualized rate last quarter, which is the fastest it has grown since 2021Q4. Consumer spending also rose to 3.60%, which was lower than the expected 4.0%. 
+
 ```
 url2 = f'https://apps.bea.gov/api/data/?UserID={user_id}&method=GetData&DataSetName=NIPA&TableName=T20303&Frequency=A,Q&Year=All&ResultFormat=JSON'
 response = requests.get(url2)
