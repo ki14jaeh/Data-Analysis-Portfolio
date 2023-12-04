@@ -133,8 +133,10 @@ ax.set_xlabel('Year')
 ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
 ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
-plt.title('PCE, Goods and Services (last 20 quarters)')
+plt.title('PCE, Goods and Services (last 10 quarters)')
 plt.legend()
 plt.show()
 ```
+
+<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231204/Consumer%20spending.png" width="800" />
 
