@@ -1,4 +1,5 @@
 # Halloween Strategy
+## Halloween Strategy (Nov.1 - Apr. 31 vs. May 1 - Oct. 31) Performance
 The Halloween effect is a strategy based on the hypothesis that the market performs better from November to next year April compared to the market from May through October. You can find academic studies done on this hypothesis (e.g. [The Halloween effect: Trick or Treat](https://www.sciencedirect.com/science/article/abs/pii/S1057521910000608)). Today we will explore whether the performance difference is statistically significant. 
 
 ```
@@ -117,7 +118,7 @@ The following chart shows the respective performance for each year.
 fig, ax = plt.subplots()
 
 # Plot 'final1' DataFrame as a bar chart with rounded data labels
-bars = ax.bar(final1['Year Range'], final1['Adj Close'], label='Oct 31st and May 1st Differences', alpha=0.7, color='blue')
+bars = ax.bar(final1['Year Range'], final1['Adj Close'], label='November - April', alpha=0.7, color='blue')
 ax.set_xlabel('Year Range')
 ax.set_ylabel('Percentage Difference (%)')
 ax.set_title('Bar Chart of Percentage Differences Over Time')
@@ -130,14 +131,30 @@ for bar, value in zip(bars, final1['Adj Close']):
             ha='center', va=va, fontsize=8, rotation=45, color='black')  # Adjust fontsize, rotation, and color
 
 # Overlay 'final2' data as a line chart on the same plot
-ax.plot(final2['Year Range'], final2['Adj Close'], color='red', label='Jan 1st and Dec 31st Differences', marker='o')
+ax.plot(final2['Year Range'], final2['Adj Close'], color='red', label='May - October', marker='o')
 
 # Display legends
 ax.legend(loc='upper left')
 
 # Automatically adjust subplot parameters to prevent overlap
 plt.tight_layout()
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
 
 plt.show()
 ```
-<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231203/Halloween%20investing.png" width="600" />
+<img src="https://github.com/ki14jaeh/Data-Analysis-Portfolio/blob/main/20231203/Halloween%20investing.png" width="800" />
+
+## Statistical Significance
+
+$H_0: Halloween Investing Performance = Non-Halloween Performance$
+```
+from scipy.stats import ttest_ind
+
+t_stat, p_value = ttest_ind(final1['Adj Close'], final2['Adj Close'], equal_var=False)
+print(p_value)
+```
+The p-value for this test came out as 0.028. This is a smaller value than a reasonable assumption of alpha = 0.05. Thus we reject the null 
+
+
+
