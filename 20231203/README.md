@@ -149,7 +149,7 @@ plt.show()
 
 $H_0$: Halloween Investing Performance = Non-Halloween Performance
 
-$H_1$: Halloween Investing Performance $!=$ Non-Halloween Performance
+$H_1$: Halloween Investing Performance $!==$ Non-Halloween Performance
 ```
 from scipy.stats import ttest_ind
 
